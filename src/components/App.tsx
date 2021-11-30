@@ -1,16 +1,14 @@
-import React from 'react';
+import { Provider } from "react-redux";
+import { store } from "../state";
+import RepositoriesList from "./RepositoriesList";
 
-
-function App() {
-  return (
+const App =() => {
+  return <Provider store={store}>
     <div>
-      <header>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </header>
+      <h1>Search for a package</h1>
+      <RepositoriesList />
     </div>
-  );
+  </Provider>
 }
 
 export default App;
